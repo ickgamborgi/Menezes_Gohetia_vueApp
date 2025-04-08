@@ -29,6 +29,13 @@
   text-align: center;
   gap: 15px;
   box-shadow: a.$blur-shadow;
+  cursor: pointer;
+  transition: a.$basic-transition;
+
+  &:hover {
+    box-shadow: a.$click-shadow;
+    transform: scale(1.02);
+  }
 }
 
 .movie-poster {
@@ -90,20 +97,19 @@
 }
 
 .loader {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 5px;
   color: white;
   text-transform: uppercase;
 
   svg {
-    background-color: a.$red;
     width: 50px;
     height: 30px;
-    border-radius: 5px;
+    border-radius: 25px;
   }
 }
 
