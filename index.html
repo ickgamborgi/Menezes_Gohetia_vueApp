@@ -1,31 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Head of the Document -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- Head of the Document -->
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link href="css/grid.css" rel="stylesheet" type="text/css" /> <!-- Grid Link -->
-    <link href="css/main.css" rel="stylesheet" type="text/css" /> <!-- Main CSS file Link -->
+    <link href="css/grid.css" rel="stylesheet" type="text/css" />
+    <!-- Grid Link -->
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <!-- Main CSS file Link -->
+
+    <!-- Font awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <script type="module" src="js/main.js"></script>
+    <!-- JS file Link -->
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png" />
 
     <!-- Document Title -->
-    <title>Document</title>
-</head>
+    <title>Marvel Movie Index</title>
+  </head>
 
-<!-- Document Body -->
-<body>
-    
-    <header>
-        <nav>
-        </nav>
-    </header>
+  <!-- Document Body -->
+  <body>
+    <h1 class="hidden">Marvel Movie Index</h1>
 
-    <main>
-    </main>
+    <!-- Introduction Section -->
+    <section class="intro full-width-grid-con">
+      <h2 class="hidden">Introduction Section</h2>
 
-    <!-- Link to JS file -->
-    <script src="js/main.js"></script>
-</body>
+      <!-- Header -->
+      <header class="header">
+        <h3 class="hidden">Header</h3>
+        <img src="images/logo.svg" alt="Marvel Logo" class="logo" />
+      </header>
 
+      <!-- Video -->
+      <video
+        class="intro-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        src="images/intro.mp4"
+      >
+        <h3 class="hidden">Video Hero</h3>
+      </video>
+
+      <div class="cover"></div>
+
+      <!-- Hero Text -->
+      <div class="col-span-full hero-text">
+        <h3>Marvel Phases</h3>
+        <p>
+          Check out all the trajectory of Marvel's heroes and the MCU in the big
+          screen!
+        </p>
+      </div>
+    </section>
+
+    <!-- Movies List Section -->
+    <section class="movie-sec grid-con">
+      <h2 class="hidden">Movies Section</h2>
+
+      <div class="movie-con col-span-full">
+        <h3 class="hidden">Movies List</h3>
+
+        <!-- Movie 1 -->
+        <a class="movie-card">
+          <img
+            src="./images/placeholder.jpg"
+            alt="Movie Poster"
+            class="movie-poster"
+          />
+          <h3 class="movie-title">Captain America: The Winter Soldier</h3>
+          <div class="movie-info">
+            <div class="movie-rating">
+              <i class="fas fa-star"></i>
+              <p>7.7</p>
+            </div>
+            <div class="movie-date">
+              <i class="fas fa-calendar-alt"></i>
+              <p>2014</p>
+            </div>
+          </div>
+          <h4 href="#" class="movie-button">View Details</h4>
+        </a>
+
+        <!-- Movie 2 -->
+        <a class="movie-card">
+          <img
+            src="./images/placeholder.jpg"
+            alt="Movie Poster"
+            class="movie-poster"
+          />
+          <h3 class="movie-title">Captain America: The Winter Soldier</h3>
+          <div class="movie-info">
+            <div class="movie-rating">
+              <i class="fas fa-star"></i>
+              <p>7.7</p>
+            </div>
+            <div class="movie-date">
+              <i class="fas fa-calendar-alt"></i>
+              <p>2014</p>
+            </div>
+          </div>
+          <h4 href="#" class="movie-button">View Details</h4>
+        </a>
+
+        <!-- Movie 3 -->
+        <a class="movie-card">
+          <img
+            src="./images/placeholder.jpg"
+            alt="Movie Poster"
+            class="movie-poster"
+          />
+          <h3 class="movie-title">Captain America: The Winter Soldier</h3>
+          <div class="movie-info">
+            <div class="movie-rating">
+              <i class="fas fa-star"></i>
+              <p>7.7</p>
+            </div>
+            <div class="movie-date">
+              <i class="fas fa-calendar-alt"></i>
+              <p>2014</p>
+            </div>
+          </div>
+          <h4 href="#" class="movie-button">View Details</h4>
+        </a>
+
+        <!-- Each movie will dynamically load in here -->
+      </div>
+
+      <!-- Loader -->
+      <div class="loader col-span-full">
+        <h3 class="hidden">Loader</h3>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <rect fill="#5A0000" width="100%" height="100%" />
+          <circle
+            fill="#FFFFFF"
+            stroke="#FFFFFF"
+            stroke-width="6"
+            r="15"
+            cx="40"
+            cy="65"
+          >
+            <animate
+              attributeName="cy"
+              calcMode="spline"
+              dur="2"
+              values="65;135;65;"
+              keySplines=".5 0 .5 1;.5 0 .5 1"
+              repeatCount="indefinite"
+              begin="-.4"
+            ></animate>
+          </circle>
+          <circle
+            fill="#FFFFFF"
+            stroke="#FFFFFF"
+            stroke-width="6"
+            r="15"
+            cx="100"
+            cy="65"
+          >
+            <animate
+              attributeName="cy"
+              calcMode="spline"
+              dur="2"
+              values="65;135;65;"
+              keySplines=".5 0 .5 1;.5 0 .5 1"
+              repeatCount="indefinite"
+              begin="-.2"
+            ></animate>
+          </circle>
+          <circle
+            fill="#FFFFFF"
+            stroke="#FFFFFF"
+            stroke-width="6"
+            r="15"
+            cx="160"
+            cy="65"
+          >
+            <animate
+              attributeName="cy"
+              calcMode="spline"
+              dur="2"
+              values="65;135;65;"
+              keySplines=".5 0 .5 1;.5 0 .5 1"
+              repeatCount="indefinite"
+              begin="0"
+            ></animate>
+          </circle>
+        </svg>
+        <p>Loading...</p>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="grid-con footer">
+      <h2 class="hidden">Footer</h2>
+
+      <div class="footer-text col-span-full">
+        <p class="footer-copy">
+          Copyright 2025 © Sheldon Gohetia &amp; Henrique Gamborgi
+        </p>
+        <p class="footer-info">
+          This project is developed for the Interactive Media Design program,
+          Winter 2025, in Fanshawe College, as a fantasy project, and has no
+          real relations to Marvel
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>

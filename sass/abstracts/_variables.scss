@@ -2,4 +2,41 @@
 
 //  Stores SASS variables like colors, font sizes, spacing, and other values that are likely to be reused.
 
-@use 'fonts';
+@use "fonts";
+
+// Colors
+$darkest-red: #310101;
+$dark-red: #4f0404;
+$red: #9e0b0b;
+$light-red: #ef3e3e;
+
+// Fonts
+
+$h1: 42px;
+$h2: 28px;
+$h3: 24px;
+$h4: 20px;
+$p: 14px;
+
+//Others
+$blur-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+$click-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+$basic-transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+/* ---Tablet Styles--- */
+@media screen and (min-width: 768px) {
+  $h1: 72px;
+  $h2: 42px;
+  $h3: 24px;
+  $h4: 22px;
+  $p: 18px;
+}
+
+// ---Desktop Styles---
+@media screen and (min-width: 1200px) {
+  $h1: 72px;
+  $h2: 42px;
+  $h3: 24px;
+  $h4: 22px;
+  $p: 18px;
+}

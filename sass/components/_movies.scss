@@ -1,0 +1,131 @@
+// This is the component file for the MOVIES section of the website.
+
+@use "../abstracts/variables" as a;
+
+/* --First: Mobile Styles--- */
+.movie-sec {
+  background-color: a.$darkest-red;
+  margin-top: -25px;
+}
+
+.movie-con {
+  background-color: a.$dark-red;
+  padding: 15px;
+  border: 1.5px solid #82222258;
+  border-radius: 25px;
+  z-index: 10;
+  box-shadow: a.$blur-shadow;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.movie-card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 15px;
+  box-shadow: a.$blur-shadow;
+}
+
+.movie-poster {
+  border-radius: 20px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  height: 350px;
+}
+
+.movie-title {
+  font-size: a.$h4;
+  font-family: "Helvetica", sans-serif;
+  font-weight: 700;
+  color: a.$red;
+  text-transform: capitalize;
+}
+
+.movie-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.movie-date,
+.movie-rating {
+  font-size: 15px;
+  font-weight: 600;
+  color: a.$red;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+
+  i {
+    color: a.$light-red;
+  }
+}
+
+.movie-button {
+  color: a.$red;
+  margin-top: 10px;
+  font-size: a.$p;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 1px solid a.$red;
+  text-align: center;
+  text-transform: uppercase;
+  transition: a.$basic-transition;
+  cursor: pointer;
+
+  &:hover {
+    background-color: a.$red;
+    box-shadow: a.$click-shadow;
+    color: white;
+  }
+}
+
+.loader {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  color: white;
+  text-transform: uppercase;
+
+  svg {
+    background-color: a.$red;
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+  }
+}
+
+/* ---Tablet Styles--- */
+@media screen and (min-width: 768px) {
+  .movie-con {
+    display: grid;
+    padding: 25px;
+    grid-template-columns: repeat(2, 1fr); // 2 colunas no tablet
+    gap: 25px;
+  }
+
+  .movie-card {
+    background-color: white;
+  }
+}
+
+// ---Desktop Styles---
+@media screen and (min-width: 1200px) {
+  .movie-con {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // 3 colunas no desktop
+    gap: 25px;
+  }
+}

@@ -1,0 +1,108 @@
+// This is the component file for the HERO section of the website.
+
+@use "../abstracts/variables" as a;
+
+/* --First: Mobile Styles--- */
+
+.intro {
+  position: relative;
+}
+
+.header {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.15);
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+
+  img {
+    width: 50px;
+    opacity: 0.75;
+  }
+}
+
+.intro-video {
+  position: absolute;
+  width: 100vw;
+  z-index: 1;
+}
+
+.cover {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: 2;
+}
+
+.hero-text {
+  z-index: 3;
+  color: white;
+  margin-top: 18%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10%;
+
+  h3 {
+    font-family: "Impact", sans-serif;
+    font-size: a.$h1;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: a.$click-shadow;
+  }
+
+  p {
+    font-size: a.$p;
+    font-weight: 200;
+    background-color: #4e00005b;
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: a.$click-shadow;
+    display: none;
+  }
+}
+
+/* ---Tablet Styles--- */
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 15px;
+
+    img {
+      width: 75px;
+    }
+  }
+
+  .hero-text {
+    margin-top: 20%;
+
+    h3 {
+      font-size: 62px;
+    }
+
+    p {
+      font-size: 18px;
+      display: block;
+    }
+  }
+}
+
+// ---Desktop Styles---
+@media screen and (min-width: 1200px) {
+  .header {
+    padding: 20px;
+
+    img {
+      width: 100px;
+    }
+  }
+}
