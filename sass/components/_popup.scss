@@ -1,6 +1,115 @@
 // This is the component file for the POP-UP section of the website.
 
+@use "../abstracts/variables" as a;
+
 /* --First: Mobile Styles--- */
+
+.popup-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 20;
+  //  display: none;
+  // just tag this off in js to make popup visible
+}
+
+.popup {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 25px;
+  z-index: 30;
+  display: flex;
+  gap: 25px;
+}
+
+.close-popup {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 40;
+  font-size: a.$h3;
+  color: a.$light-red;
+  cursor: pointer;
+  transition: a.$basic-transition;
+
+  &:hover {
+    color: a.$red;
+    transform: scale(1.2);
+  }
+}
+
+.details-poster {
+  width: 40%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px 0px 0px 20px;
+}
+
+.popup-con {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-right: 25px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+
+  p {
+    font-size: 12px;
+    color: gray;
+  }
+}
+
+.details-rating {
+  font-size: 15px;
+  font-weight: 600;
+  color: a.$red;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+
+  i {
+    color: a.$light-red;
+  }
+
+  p {
+    color: a.$light-red;
+  }
+}
+
+.details-title-con {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.details-title {
+  font-size: a.$h3;
+  font-family: "Helvetica", sans-serif;
+  color: a.$red;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.details-sub {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.details-subtitle {
+  font-size: a.$p;
+  font-family: "Helvetica", sans-serif;
+  color: a.$light-red;
+  text-transform: uppercase;
+}
 
 /* ---Tablet Styles--- */
 @media screen and (min-width: 768px) {
