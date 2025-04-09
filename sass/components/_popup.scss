@@ -11,13 +11,23 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.75);
-  z-index: 20;
-  //  display: none;
-  // just tag this off in js to make popup visible
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.popup-bg.showPopup {
+  opacity: 1;
+  visibility: visible;
 }
 
 .popup {
-  position: relative;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -28,6 +38,16 @@
   z-index: 30;
   display: flex;
   gap: 25px;
+
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9999;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.popup.showPopup {
+  opacity: 1;
+  visibility: visible;
 }
 
 .close-popup {
