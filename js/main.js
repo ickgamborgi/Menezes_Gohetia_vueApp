@@ -1,6 +1,8 @@
 const app = Vue.createApp({
   created() {
-    fetch("http://localhost:8888/marvel-lumen/public/index.php/movies")
+    fetch(
+      "http://localhost:8888/Menezes_Gohetia_lumenVue/backend/public/index.php/movies"
+    )
       .then((response) => response.json())
       .then((data) => {
         // console.log(data);
@@ -29,7 +31,9 @@ const app = Vue.createApp({
   methods: {
     getMovie(id) {
       this.loadingMovies = true;
-      fetch(`http://localhost:8888/marvel-lumen/public/index.php/movies/${id}`)
+      fetch(
+        `http://localhost:8888/Menezes_Gohetia_lumenVue/backend/public/index.php/movies${id}`
+      )
         .then((response) => response.json())
         .then((data) => {
           this.loadingMovies = false;
