@@ -140,6 +140,7 @@
           v-for="movie in moviesData"
           :key="movie.id"
           href="#movie"
+          @click.prevent="getMovie(movie.id)"
         >
           <img
             :src="`images/${movie.movie_image}`"
